@@ -185,12 +185,12 @@ public class PlayScreen implements Screen {
                     if (shotsFired < MAG_SIZE) {
                         mag.add(new Bullets(zeta, this, player.b2body.getPosition().x, player.b2body.getPosition().y));
                         shotsFired++;
+                        zeta.loadSound("audio/sounds/214990__peridactyloptrix__laser-blast-(Rifle).wav");
                     }
                     else if(shotsFired == MAG_SIZE){
                         System.out.println("Mag Empty: " + shotsFired);
                     }
 
-                    zeta.loadSound("audio/sounds/214990__peridactyloptrix__laser-blast-(Rifle).wav");
                     long id = zeta.sound.play();
                     if (zeta.getSoundVolume() != 0)
                         zeta.sound.setVolume(id, zeta.getSoundVolume());
