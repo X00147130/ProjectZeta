@@ -1,0 +1,299 @@
+
+boy.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+playercard
+  rotate: false
+  xy: 1, 94
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0
+  rotate: false
+  xy: 1, 59
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1
+  rotate: false
+  xy: 64, 94
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2
+  rotate: false
+  xy: 1, 24
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3
+  rotate: false
+  xy: 64, 59
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4
+  rotate: false
+  xy: 127, 94
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5
+  rotate: false
+  xy: 64, 24
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+dead6
+  rotate: false
+  xy: 127, 53
+  size: 37, 39
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+dead4
+  rotate: false
+  xy: 190, 90
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+dead5
+  rotate: false
+  xy: 229, 90
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+dead1
+  rotate: false
+  xy: 268, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+dead2
+  rotate: false
+  xy: 304, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+dead3
+  rotate: false
+  xy: 340, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle1
+  rotate: false
+  xy: 376, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle2
+  rotate: false
+  xy: 412, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle3
+  rotate: false
+  xy: 448, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle4
+  rotate: false
+  xy: 484, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump1
+  rotate: false
+  xy: 520, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump2
+  rotate: false
+  xy: 556, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump3
+  rotate: false
+  xy: 592, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump4
+  rotate: false
+  xy: 628, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump5
+  rotate: false
+  xy: 664, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump6
+  rotate: false
+  xy: 700, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run1
+  rotate: false
+  xy: 736, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run2
+  rotate: false
+  xy: 772, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run3
+  rotate: false
+  xy: 808, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run4
+  rotate: false
+  xy: 844, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run5
+  rotate: false
+  xy: 880, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run6
+  rotate: false
+  xy: 916, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run7
+  rotate: false
+  xy: 952, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run8
+  rotate: false
+  xy: 988, 90
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot1
+  rotate: false
+  xy: 127, 14
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot2
+  rotate: false
+  xy: 166, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot3
+  rotate: false
+  xy: 202, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot4
+  rotate: false
+  xy: 238, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot5
+  rotate: false
+  xy: 274, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot6
+  rotate: false
+  xy: 310, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot7
+  rotate: false
+  xy: 346, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot8
+  rotate: false
+  xy: 382, 51
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+bullet1
+  rotate: false
+  xy: 1, 1
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+bullet2
+  rotate: false
+  xy: 418, 77
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+bullet3
+  rotate: false
+  xy: 17, 1
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1

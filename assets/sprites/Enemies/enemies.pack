@@ -1,0 +1,414 @@
+
+enemies.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Kraken/attack4
+  rotate: false
+  xy: 1, 1
+  size: 49, 37
+  orig: 49, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack5
+  rotate: false
+  xy: 52, 1
+  size: 49, 37
+  orig: 49, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack6
+  rotate: false
+  xy: 103, 1
+  size: 49, 37
+  orig: 49, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack7
+  rotate: false
+  xy: 154, 1
+  size: 49, 37
+  orig: 49, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack8
+  rotate: false
+  xy: 205, 1
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase7
+  rotate: false
+  xy: 251, 1
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Kraken/death5
+  rotate: false
+  xy: 292, 1
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+Kraken/death6
+  rotate: false
+  xy: 331, 1
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack1
+  rotate: false
+  xy: 370, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack2
+  rotate: false
+  xy: 406, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/attack3
+  rotate: false
+  xy: 442, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase1
+  rotate: false
+  xy: 478, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase2
+  rotate: false
+  xy: 514, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase3
+  rotate: false
+  xy: 550, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase4
+  rotate: false
+  xy: 586, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase5
+  rotate: false
+  xy: 622, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase6
+  rotate: false
+  xy: 658, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/chase8
+  rotate: false
+  xy: 694, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/death1
+  rotate: false
+  xy: 730, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/death2
+  rotate: false
+  xy: 766, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/death3
+  rotate: false
+  xy: 802, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Kraken/death4
+  rotate: false
+  xy: 838, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+
+enemies2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Traps/bomb9
+  rotate: false
+  xy: 1, 68
+  size: 49, 48
+  orig: 49, 48
+  offset: 0, 0
+  index: -1
+Traps/bomb8
+  rotate: false
+  xy: 1, 21
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+Traps/bomb7
+  rotate: false
+  xy: 52, 73
+  size: 45, 43
+  orig: 45, 43
+  offset: 0, 0
+  index: -1
+Traps/bomb6
+  rotate: false
+  xy: 99, 75
+  size: 46, 41
+  orig: 46, 41
+  offset: 0, 0
+  index: -1
+Traps/bomb5
+  rotate: false
+  xy: 147, 78
+  size: 34, 38
+  orig: 34, 38
+  offset: 0, 0
+  index: -1
+Traps/bomb1
+  rotate: false
+  xy: 183, 79
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Traps/bomb2
+  rotate: false
+  xy: 219, 79
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Traps/fire1
+  rotate: false
+  xy: 50, 2
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire2
+  rotate: false
+  xy: 68, 7
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire3
+  rotate: false
+  xy: 86, 7
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire4
+  rotate: false
+  xy: 104, 9
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire5
+  rotate: false
+  xy: 122, 9
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire6
+  rotate: false
+  xy: 140, 9
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire7
+  rotate: false
+  xy: 158, 12
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire8
+  rotate: false
+  xy: 176, 12
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/fire9
+  rotate: false
+  xy: 194, 13
+  size: 16, 64
+  orig: 16, 64
+  offset: 0, 0
+  index: -1
+Traps/bomb3
+  rotate: false
+  xy: 212, 40
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Traps/bomb4
+  rotate: false
+  xy: 212, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+
+enemies3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Truhan/attack5
+  rotate: false
+  xy: 1, 197
+  size: 44, 43
+  orig: 44, 43
+  offset: 0, 0
+  index: -1
+Truhan/attack6
+  rotate: false
+  xy: 1, 157
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+Truhan/attack7
+  rotate: false
+  xy: 47, 203
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+Truhan/attack4
+  rotate: false
+  xy: 93, 197
+  size: 34, 43
+  orig: 34, 43
+  offset: 0, 0
+  index: -1
+Truhan/attack8
+  rotate: false
+  xy: 1, 118
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Truhan/death1
+  rotate: false
+  xy: 47, 164
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Truhan/death2
+  rotate: false
+  xy: 88, 158
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Truhan/death3
+  rotate: false
+  xy: 1, 79
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Truhan/death4
+  rotate: false
+  xy: 1, 40
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+Truhan/attack1
+  rotate: false
+  xy: 1, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/attack2
+  rotate: false
+  xy: 42, 118
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/attack3
+  rotate: false
+  xy: 42, 79
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/chase1
+  rotate: false
+  xy: 42, 40
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/chase2
+  rotate: false
+  xy: 37, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/chase3
+  rotate: false
+  xy: 78, 119
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/chase4
+  rotate: false
+  xy: 78, 80
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+Truhan/chase5
+  rotate: false
+  xy: 78, 41
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,544 @@
+
+robot.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+playercard0-0
+  rotate: false
+  xy: 1, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-1
+  rotate: false
+  xy: 1, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-2
+  rotate: false
+  xy: 64, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-3
+  rotate: false
+  xy: 1, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-4
+  rotate: false
+  xy: 64, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-5
+  rotate: false
+  xy: 127, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard0-6
+  rotate: false
+  xy: 1, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-0
+  rotate: false
+  xy: 64, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-1
+  rotate: false
+  xy: 127, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-2
+  rotate: false
+  xy: 190, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-3
+  rotate: false
+  xy: 1, 79
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-4
+  rotate: false
+  xy: 64, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-5
+  rotate: false
+  xy: 127, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard1-6
+  rotate: false
+  xy: 190, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-0
+  rotate: false
+  xy: 253, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-1
+  rotate: false
+  xy: 1, 44
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-2
+  rotate: false
+  xy: 64, 79
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-3
+  rotate: false
+  xy: 127, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-4
+  rotate: false
+  xy: 190, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-5
+  rotate: false
+  xy: 253, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard2-6
+  rotate: false
+  xy: 316, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-0
+  rotate: false
+  xy: 1, 9
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-1
+  rotate: false
+  xy: 64, 44
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-2
+  rotate: false
+  xy: 127, 79
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-3
+  rotate: false
+  xy: 190, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-4
+  rotate: false
+  xy: 253, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-5
+  rotate: false
+  xy: 316, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard3-6
+  rotate: false
+  xy: 379, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-0
+  rotate: false
+  xy: 64, 9
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-1
+  rotate: false
+  xy: 127, 44
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-2
+  rotate: false
+  xy: 190, 79
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-3
+  rotate: false
+  xy: 253, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-4
+  rotate: false
+  xy: 316, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-5
+  rotate: false
+  xy: 379, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard4-6
+  rotate: false
+  xy: 442, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-0
+  rotate: false
+  xy: 127, 9
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-1
+  rotate: false
+  xy: 190, 44
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-2
+  rotate: false
+  xy: 253, 79
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-3
+  rotate: false
+  xy: 316, 114
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-4
+  rotate: false
+  xy: 379, 149
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-5
+  rotate: false
+  xy: 442, 184
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+playercard5-6
+  rotate: false
+  xy: 505, 219
+  size: 61, 33
+  orig: 61, 33
+  offset: 0, 0
+  index: -1
+dead4
+  rotate: false
+  xy: 190, 5
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+dead5
+  rotate: false
+  xy: 253, 40
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+dead6
+  rotate: false
+  xy: 316, 75
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+dead1
+  rotate: false
+  xy: 379, 110
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+dead2
+  rotate: false
+  xy: 442, 145
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+dead3
+  rotate: false
+  xy: 505, 180
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle1
+  rotate: false
+  xy: 568, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle2
+  rotate: false
+  xy: 604, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle3
+  rotate: false
+  xy: 640, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+idle4
+  rotate: false
+  xy: 676, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump1
+  rotate: false
+  xy: 712, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump2
+  rotate: false
+  xy: 748, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump3
+  rotate: false
+  xy: 784, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump4
+  rotate: false
+  xy: 820, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump5
+  rotate: false
+  xy: 856, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+jump6
+  rotate: false
+  xy: 892, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run1
+  rotate: false
+  xy: 928, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run2
+  rotate: false
+  xy: 964, 215
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run3
+  rotate: false
+  xy: 229, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run4
+  rotate: false
+  xy: 265, 1
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run5
+  rotate: false
+  xy: 355, 71
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run6
+  rotate: false
+  xy: 391, 71
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run7
+  rotate: false
+  xy: 478, 141
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+run8
+  rotate: false
+  xy: 514, 141
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+bullet1
+  rotate: false
+  xy: 1000, 241
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+bullet2
+  rotate: false
+  xy: 292, 66
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+shoot1
+  rotate: false
+  xy: 308, 36
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot2
+  rotate: false
+  xy: 344, 32
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot3
+  rotate: false
+  xy: 380, 32
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot4
+  rotate: false
+  xy: 416, 32
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+bullet3
+  rotate: false
+  xy: 292, 53
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+shoot5
+  rotate: false
+  xy: 427, 106
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot6
+  rotate: false
+  xy: 463, 102
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot7
+  rotate: false
+  xy: 499, 102
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+shoot8
+  rotate: false
+  xy: 535, 102
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
