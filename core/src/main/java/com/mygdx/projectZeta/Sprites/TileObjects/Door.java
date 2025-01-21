@@ -48,9 +48,22 @@ public class Door extends InteractiveTileObject {
     public void onHit(Player player) {
 
         Gdx.app.log("Door", "Collision");
-        if(player.getKey())
+        if (player.getKey()) {
             doorJustTouched = true;
-        else {
+            if (Gdx.app.getType() == Application.ApplicationType.Desktop) {
+                zeta.loadSound("audio/sounds/364688__alegemaate__electronic-door-opening.wav");
+                long id = zeta.sound.play();
+                if (zeta.getSoundVolume() != 0) {
+                    zeta.sound.setVolume(id, zeta.getSoundVolume());
+                } else {
+                    zeta.sound.setVolume(id, 0);
+                }
+            }
+
+            if (Gdx.app.getType() == Application.ApplicationType.Android) {
+                zeta.manager.get("audio/sounds/364688__alegemaate__electronic-door-opening.wav", Sound.class).play(zeta.getSoundVolume());
+            }
+        } else {
 
             if (Gdx.app.getType() == Application.ApplicationType.Desktop) {
                 zeta.loadSound("audio/sounds/stomp.wav");

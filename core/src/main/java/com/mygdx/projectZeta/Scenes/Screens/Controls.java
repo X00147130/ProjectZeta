@@ -186,7 +186,7 @@ public class Controls implements Screen {
             zeta.batch.draw(jumpImg,260,100,20,20);
             zeta.batch.draw(shootImg,260,80,20,20);
             zeta.batch.draw(interactImg,260,60,20,20);
-            zeta.batch.draw(pauseImg,260,20,20,20);
+            zeta.batch.draw(pauseImg,260,40,20,20);
         }
 
         zeta.batch.end();

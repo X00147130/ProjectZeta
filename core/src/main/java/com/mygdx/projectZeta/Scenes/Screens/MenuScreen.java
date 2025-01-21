@@ -16,9 +16,13 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.projectZeta.projectZeta;
@@ -35,12 +39,25 @@ public class MenuScreen implements Screen  {
 
 
     //Buttons
-    private Label play;
-    private Label levelSelect;
-    private Label controls;
-    private Label settings;
-    private Label quit;
+    Texture playImg;
+    Drawable playDraw;
+    Button playButton;
 
+    Texture lvlselImg;
+    Drawable lvlselDraw;
+    Button lvlselButton;
+
+    Texture controlsImg;
+    Drawable controlsDraw;
+    Button controlsButton;
+
+    Texture settingsImg;
+    Drawable settingsDraw;
+    Button settingsButton;
+
+    Texture quitImg;
+    Drawable quitDraw;
+    Button quitButton;
 
     public MenuScreen(final projectZeta game) {
         this.zeta = game;
@@ -66,35 +83,45 @@ public class MenuScreen implements Screen  {
         Label titleLabel2 = new Label("ZETA", font);
         titleLabel2.setFontScale(1.2f, 0.8f);
 
-        play = new Label("Play", buttonFont);
-        play.setFontScale(0.5f, 0.5f);
 
-        levelSelect = new Label("Level Select", buttonFont);
-        levelSelect.setFontScale(0.5f, 0.5f);
+        playImg = new Texture("UI/play.png");
+        playDraw = new TextureRegionDrawable(playImg);
+        playButton = new ImageButton(playDraw);
+        playButton.setSize(46,38);
 
-        controls = new Label("Controls", buttonFont);
-        controls.setFontScale(0.5f, 0.5f);
+        lvlselImg = new Texture("UI/levelselect.png");
+        lvlselDraw = new TextureRegionDrawable(lvlselImg);
+        lvlselButton = new ImageButton(lvlselDraw);
+        lvlselButton.setSize(46,38);
 
-        settings = new Label("Settings", buttonFont);
-        settings.setFontScale(0.5f, 0.5f);
+        controlsImg = new Texture("UI/controls.png");
+        controlsDraw = new TextureRegionDrawable(controlsImg);
+        controlsButton = new ImageButton(controlsDraw);
+        controlsButton.setSize(46,38);
 
-        quit = new Label("Exit", buttonFont);
-        quit.setFontScale(0.5f, 0.5f);
+        settingsImg = new Texture("UI/settings.png");
+        settingsDraw = new TextureRegionDrawable(settingsImg);
+        settingsButton = new ImageButton(settingsDraw);
+        settingsButton.setSize(46,38);
 
+        quitImg = new Texture("UI/quit.png");
+        quitDraw = new TextureRegionDrawable(quitImg);
+        quitButton = new ImageButton(quitDraw);
+        quitButton.setSize(46,38);
 
         table.add(titleLabel).expandX();
         table.row();
         table.add(titleLabel2).expandX();
         table.row();
-        table.add(play).expandX().padTop(10);
+        table.add(playButton).expandX().padTop(10);
         table.row();
-        table.add(levelSelect).expandX().padTop(5);
+        table.add(lvlselButton).expandX().padTop(5);
         table.row();
-        table.add(controls).expandX().padTop(5);
+        table.add(controlsButton).expandX().padTop(5);
         table.row();
-        table.add(settings).expandX().padTop(5);
+        table.add(settingsButton).expandX().padTop(5);
         table.row();
-        table.add(quit).expandX().padTop(5);
+        table.add(quitButton).expandX().padTop(5);
         table.row();
 
 
@@ -102,7 +129,7 @@ public class MenuScreen implements Screen  {
         Gdx.input.setInputProcessor(stage);
 
 
-        play.addListener(new ClickListener() {
+        playButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -126,7 +153,7 @@ public class MenuScreen implements Screen  {
             }
         });
 
-        levelSelect.addListener(new ClickListener() {
+        lvlselButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if(Gdx.app.getType() == Application.ApplicationType.Android) {
@@ -146,7 +173,7 @@ public class MenuScreen implements Screen  {
             }
         });
 
-        controls.addListener(new ClickListener() {
+        controlsButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -166,7 +193,7 @@ public class MenuScreen implements Screen  {
             }
         });
 
-        settings.addListener(new ClickListener() {
+        settingsButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -186,7 +213,7 @@ public class MenuScreen implements Screen  {
             }
         });
 
-        quit.addListener(new ClickListener(){
+        quitButton.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {

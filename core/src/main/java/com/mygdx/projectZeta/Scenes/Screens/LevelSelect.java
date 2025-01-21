@@ -47,14 +47,6 @@ public class LevelSelect implements Screen {
 
     Label backButton;
 
-    Texture prevImage;
-    Drawable prevDraw;
-    Button previousButton;
-
-    Texture image;
-    Drawable draw;
-    Button nextButton;
-
     //Background
     private Texture background;
 

@@ -45,7 +45,6 @@ public class Settings implements Screen {
     Skin skin;
 
     Stage stage;
-    TextButton.TextButtonStyle textStyle;
     BitmapFont buttonFont;
 
     private Texture background;
