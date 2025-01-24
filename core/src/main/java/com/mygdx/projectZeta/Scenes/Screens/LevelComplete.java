@@ -19,6 +19,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.mygdx.projectZeta.Tools.TransitionScreen;
 import com.mygdx.projectZeta.projectZeta;
 
 public class LevelComplete implements Screen {
@@ -29,6 +30,7 @@ public class LevelComplete implements Screen {
     private Stage stage;
     private SpriteBatch batch;
     private int score = 0;
+    private int sceneTracking;
 
 
     //Next level button variables
@@ -52,6 +54,7 @@ public class LevelComplete implements Screen {
         screen = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT,new OrthographicCamera());
         stage = new Stage(screen, zeta.batch);
 
+        sceneTracking = zeta.getSceneTracking() +1;
         map = level + 1;
         batch = game.batch;
 
@@ -127,10 +130,7 @@ public class LevelComplete implements Screen {
                       zeta.manager.get("audio/sounds/672801__silverillusionist__level-upmission-complete-resistance.wav", Sound.class).stop();
                       zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
                   }
-
-
-
-                  zeta.setScreen(new PlayScreen(zeta, map));
+                  zeta.setScreen(new TransitionScreen(zeta.getScreen(),(new CutsceneScreen(zeta,sceneTracking, map, false)),zeta,map));
                   /*sfs.setMoney(0);*/
               }
           });
@@ -199,11 +199,13 @@ public class LevelComplete implements Screen {
         Gdx.gl.glClearColor(0,0,0,1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+
         batch.begin();
         batch.draw(background,0,0,400,300);
         batch.end();
 
         stage.draw();
+        Gdx.input.setInputProcessor(stage);
     }
 
     @Override

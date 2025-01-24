@@ -85,6 +85,7 @@ public class LevelSelect implements Screen {
     private Viewport viewport;
     private Stage screen;
     private int level = 1;
+    private int sceneTracking;
 
 
     public LevelSelect(final projectZeta game) {
@@ -94,6 +95,7 @@ public class LevelSelect implements Screen {
         zeta = game;
         viewport = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT, new OrthographicCamera());
         screen = new Stage(viewport, zeta.batch);
+        sceneTracking = zeta.getSceneTracking();
 
         //Texture
         background = zeta.manager.get("backgrounds/lvlselectbg.png", Texture.class);
@@ -227,7 +229,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta,1));
+                zeta.setScreen(new CharacterSelect(zeta,1,1));
             }
         });
 
@@ -250,7 +252,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 2));
+                zeta.setScreen(new CharacterSelect(zeta, 2,3));
             }
         });
 
@@ -273,7 +275,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 3));
+                zeta.setScreen(new CharacterSelect(zeta, 3,3));
             }
         });
 
@@ -296,7 +298,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta,4));
+                zeta.setScreen(new CharacterSelect(zeta,4,4));
             }
         });
 
@@ -318,7 +320,7 @@ public class LevelSelect implements Screen {
                 }
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 5));
+                zeta.setScreen(new CharacterSelect(zeta, 5,5));
             }
         });
 
@@ -341,7 +343,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 6));
+                zeta.setScreen(new CharacterSelect(zeta, 6,6));
             }
         });
 
@@ -364,7 +366,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta,7));
+                zeta.setScreen(new CharacterSelect(zeta,7,7));
             }
         });
 
@@ -387,7 +389,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 8));
+                zeta.setScreen(new CharacterSelect(zeta, 8,8));
             }
         });
 
@@ -409,7 +411,7 @@ public class LevelSelect implements Screen {
                 }
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 9));
+                zeta.setScreen(new CharacterSelect(zeta, 9,9));
             }
         });
 
@@ -432,7 +434,7 @@ public class LevelSelect implements Screen {
 
 
                 zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 10));
+                zeta.setScreen(new CharacterSelect(zeta, 10,10));
             }
         });
     }

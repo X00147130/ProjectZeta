@@ -1,5 +1,7 @@
 package com.mygdx.projectZeta.Sprites.Enemies;
 
+import com.badlogic.gdx.Application;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -25,10 +27,12 @@ public abstract class Enemy extends Sprite {
         this.screen = screen;
         setPosition(x, y);
         defineEnemy();
-        velocity = new Vector2(-0.19f, 0f);
+        if(Gdx.app.getType() == Application.ApplicationType.Android)
+            velocity = new Vector2(-0.19f, 0f);
+        else{
+            velocity = new Vector2(-0.1f,0f);
+        }
         attackStop = new Vector2(0, 0);
-        /*krakenBody.setActive(false);*/
-        /*truhanBody.setActive(false);*/
     }
 
     protected abstract void defineEnemy();

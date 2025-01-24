@@ -141,7 +141,7 @@ public class MenuScreen implements Screen  {
                 if(zeta.music.isPlaying())
                     zeta.music.stop();
 
-                zeta.setScreen(new CharacterSelect(zeta, 1));
+                zeta.setScreen(new CharacterSelect(zeta, 1,1));
                 dispose();
 
             }

@@ -39,6 +39,7 @@ public class CutsceneScreen implements Screen {
     private Texture bg;
     private Preferences prefs;
     private boolean finished, transition = false;
+    private int map;
 
     //Script Related Variables
     private ArrayList<Script> list, scripts;
@@ -55,11 +56,14 @@ public class CutsceneScreen implements Screen {
     private Texture character;
     private Image characterImg;
     private boolean pass = false;
+    private boolean end = false;
 
-    public CutsceneScreen(projectZeta zeta, final int sceneId) {
+    public CutsceneScreen(projectZeta zeta, final int sceneId, int level, boolean end) {
 //Overall Screen Setup
         this.zeta = zeta;
         this.sceneId = sceneId;
+        this.end = end;
+        map = level;
         viewport = new FitViewport(this.zeta.V_WIDTH, this.zeta.V_HEIGHT, new OrthographicCamera());
 
 //Script setup
@@ -73,8 +77,8 @@ public class CutsceneScreen implements Screen {
 //Table and Stage creation
         Gdx.input.setInputProcessor(stage);
         prefs = Gdx.app.getPreferences("ProjectZetaPrefs");
-        if(sceneId >= prefs.getInteger("level")){
-            prefs.putInteger("level",sceneId);
+        if (sceneId >= prefs.getInteger("level")) {
+            prefs.putInteger("level", sceneId);
         }
         stage = new Stage(viewport, zeta.batch);
         Table table = new Table();
@@ -91,7 +95,7 @@ public class CutsceneScreen implements Screen {
 
 //Text setup
         Label.LabelStyle titleStyle = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDisco.fnt")), WHITE);
-        title = new Label(String.format("Setup"), titleStyle);
+        title = new Label(String.format("title"), titleStyle);
         title.setFontScale(0.4f);
 
         Label.LabelStyle textStyle = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDiscoThin.fnt")), WHITE);
@@ -110,8 +114,6 @@ public class CutsceneScreen implements Screen {
         window2.add(characterImg);
         window.add(title);
         window.add(text);
-        /*window.add(next);
-        window.add(skip);*/
 
 //Button Creation
         nextImg = new Texture("UI/buttons/next.png");
@@ -127,16 +129,15 @@ public class CutsceneScreen implements Screen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 if (zeta.getScreen().getClass() == CutsceneScreen.class) {
-                    System.out.println("Next Clicked"+ next.isPressed());
+                    System.out.println("Next Clicked" + sceneId);
                     if (finished) {
-                        if (sceneId == 30)
-                            zeta.setScreen(new TransitionScreen(zeta.getScreen(), new LevelComplete(zeta,zeta.getLevel()),zeta));
+                        if (end)
+                            zeta.setScreen(new TransitionScreen(zeta.getScreen(), new LevelComplete(zeta, map), zeta, map));
                         else
-                            zeta.setScreen(new TransitionScreen(zeta.getScreen(), new PlayScreen(zeta, zeta.getLevel()), zeta));
-                        transition = true;
+                            zeta.setScreen(new TransitionScreen(zeta.getScreen(), new PlayScreen(zeta, map), zeta, map));
                     }
-                    zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play();
-                    pass = true;
+                    zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
+                    pass= true;
                 }
                 return true;
             }
@@ -157,9 +158,12 @@ public class CutsceneScreen implements Screen {
                 System.out.println("skip Clicked" + skip.isPressed());
                 if (zeta.getScreen().getClass() == CutsceneScreen.class) {
                     if (sceneId == 30)
-                        zeta.setScreen(new TransitionScreen(zeta.getScreen(), new LevelComplete(zeta, zeta.getLevel()), zeta));
-                    else
-                        zeta.setScreen(new TransitionScreen(zeta.getScreen(), new PlayScreen(zeta, zeta.getLevel()), zeta));
+                        zeta.setScreen(new TransitionScreen(zeta.getScreen(), new Credits(zeta), zeta, map));
+                    else if (end) {
+                        zeta.setScreen(new TransitionScreen(zeta.getScreen(), new LevelComplete(zeta, map), zeta, map));
+                    } else {
+                        zeta.setScreen(new TransitionScreen(zeta.getScreen(), new PlayScreen(zeta, map), zeta, map));
+                    }
                     transition = true;
 
                     zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
@@ -179,6 +183,8 @@ public class CutsceneScreen implements Screen {
         window.setVisible(false);
         next.setVisible(false);
         skip.setVisible(false);
+
+        zeta.setSceneTracking(sceneId);
 
     }
 
@@ -210,14 +216,13 @@ public class CutsceneScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         zeta.batch.begin();
         zeta.batch.draw(bg, 0, 0, zeta.V_WIDTH, zeta.V_HEIGHT);
-        characterImg.setBounds(175,100, 50,50);
+        characterImg.setBounds(175, 100, 50, 50);
         characterImg.draw(zeta.batch, 1);
-        window.setBounds(20,15,320,30);
-        next.setBounds(330, 30, 20,10);
-        skip.setBounds(330, 10, 20,10);
+        window.setBounds(20, 15, 320, 30);
+        next.setBounds(330, 30, 20, 10);
+        skip.setBounds(330, 10, 20, 10);
         zeta.batch.end();
         stage.draw();
-
 
 
     }
@@ -262,6 +267,11 @@ public class CutsceneScreen implements Screen {
         stage.dispose();
         bg.dispose();
     }
+
+    public int getSceneId() {
+        return sceneId;
+    }
+
 
     @Override
     public void resize(int width, int height) {

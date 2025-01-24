@@ -16,7 +16,7 @@ import com.mygdx.projectZeta.Scenes.Screens.LogoScreen;
 public class projectZeta extends Game {
     //constants
     public static final int V_WIDTH = 400;
-    public static final int V_HEIGHT = 208;
+    public static final int V_HEIGHT = 228;
     public static final int MAP_WIDTH = 900;
     public static final int MAP_HEIGHT = 508;
     public static final float PPM = 150;
@@ -81,6 +81,8 @@ public class projectZeta extends Game {
 
     public TextureAtlas playersChoice;
     private int selection = 0;
+
+    private int sceneTracking = 0;
 
     public static AssetManager manager;
 
@@ -280,6 +282,12 @@ public class projectZeta extends Game {
         this.interact = interact;
     }
 
+    public int getSceneTracking() {
+        return sceneTracking;
+    }
 
+    public void setSceneTracking(int sceneTracking) {
+        this.sceneTracking = sceneTracking;
+    }
 }
 
