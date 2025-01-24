@@ -32,7 +32,6 @@ public class LevelComplete implements Screen {
 
 
     //Next level button variables
-    private int area;
     private int map;
 
 
@@ -46,15 +45,12 @@ public class LevelComplete implements Screen {
     Label Coins;
     private Texture background;
 
-    public LevelComplete(projectZeta game, int location, int level){
+    public LevelComplete(projectZeta game, int level){
         super();
         //admin setup
         this.zeta = game;
         screen = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT,new OrthographicCamera());
         stage = new Stage(screen, zeta.batch);
-        area = location;
-        if(area == 1 && map == 11)
-            area = 2;
 
         map = level + 1;
         batch = game.batch;

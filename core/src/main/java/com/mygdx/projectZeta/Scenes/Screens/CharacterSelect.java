@@ -25,6 +25,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.mygdx.projectZeta.Tools.TransitionScreen;
 import com.mygdx.projectZeta.projectZeta;
 
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class CharacterSelect implements Screen {
     private Viewport viewport;
     private Texture background;
     private int map;
+    private int selection = 0;
 
     /* Arrays To Loop through for Selection */
     private ArrayList<Texture> characterSelector;
@@ -104,9 +106,9 @@ public class CharacterSelect implements Screen {
 //Intiatialising and Names of characters added to the arraylist
         characterNames = new ArrayList<Label>(3);
 
-        femaleLabel = new Label("Roslyn", font);
-        maleLabel = new Label("Kobi", font);
-        robotLabel = new Label("Dave", font);
+        femaleLabel = new Label("RANGER BATU", font);
+        maleLabel = new Label("CAPTAIN RUSH", font);
+        robotLabel = new Label("RANGER X021", font);
 
         characterNames.add(0, femaleLabel);
         characterNames.add(1, maleLabel);
@@ -133,6 +135,7 @@ public class CharacterSelect implements Screen {
         if (Gdx.app.getType() == Application.ApplicationType.Android) {
 //Initialising stage and table
             stage = new Stage(viewport, zeta.batch);
+            Gdx.input.setInputProcessor(stage);
             table = new Table();
             table.setFillParent(true);
             table.center();
@@ -144,9 +147,8 @@ public class CharacterSelect implements Screen {
             table.row();
             table.add(choose).center().padLeft(70).padTop(30);
 
-//Passing the table to the Stage and passing the Stage in as the location we want to read inputs from
+//Passing the table to the Stage
             stage.addActor(table);
-            Gdx.input.setInputProcessor(stage);
 
 //Adding a click Listener for the right arrow button
             right.addListener(new ClickListener() {
@@ -227,7 +229,7 @@ public class CharacterSelect implements Screen {
                     }
                     zeta.setPlayersChoice(selected);
 
-                    zeta.setScreen(new PlayScreen(zeta, map));
+                    zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,1), zeta));
                 }
             });
         }
@@ -259,9 +261,9 @@ public class CharacterSelect implements Screen {
 
         zeta.batch.draw(characterSelector.get(i), 185, 105);
 
-        characterNames.get(0).setBounds(155, 55, 70, 70);
-        characterNames.get(1).setBounds(169, 55, 70, 70);
-        characterNames.get(2).setBounds(166, 55, 70, 70);
+        characterNames.get(0).setBounds(108, 55, 70, 70);
+        characterNames.get(1).setBounds(105, 55, 70, 70);
+        characterNames.get(2).setBounds(110, 55, 70, 70);
         characterNames.get(i).draw(zeta.batch, 1);
 
         zeta.batch.end();
@@ -352,22 +354,25 @@ public class CharacterSelect implements Screen {
                 switch (i) {
                     case 0:
                         selected = zeta.getCharacterFemale();
+                        selection = 0;
                         break;
 
                     case 1:
                         selected = zeta.getCharacterMale();
+                        selection = 1;
                         break;
 
                     case 2:
                         selected = zeta.getCharacterRobot();
+                        selection = 2;
                         break;
 
                     default:
                 }
 
-
+                zeta.setSelection(selection);
                 zeta.setPlayersChoice(selected);
-                zeta.setScreen(new PlayScreen(zeta, map));
+                zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,1),zeta));
             }
         }
     }
@@ -405,7 +410,6 @@ public class CharacterSelect implements Screen {
     //Trash disposing
     @Override
     public void dispose() {
-        stage.dispose();
         System.gc();
     }
 }

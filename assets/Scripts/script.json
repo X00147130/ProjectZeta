@@ -1,0 +1,104 @@
+[
+  {
+    "icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " Ranger come in. "
+  },
+  {
+    "icon": 2,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Captain Rush :",
+    "line": " Captain Rush checking in sir.\n My Team are ready for tasking."
+  },
+  {
+    "icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " Glad to have you Captain.\n We have found Krakens in this sector!!"
+  },
+  {"icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " We must destroy them to keep\n the surrounding Zethos planets safe."
+  },
+  {"icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " Your objective is to\n pass through all the zones."
+  },
+  {"icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " We will use your locator beacons\n to strike the areas you pass through."
+  },
+  {
+    "icon": 2,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Captain Rush :",
+    "line": " Copy. My Team and I will\n complete the objective."
+  },
+  {
+    "icon": 3,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Marshal Zoid :",
+    "line": " For the Superior!"
+  },
+  {
+    "icon": 2,
+    "id": 1,
+    "bg": 1,
+    "titleLine": "Captain Rush :",
+    "line": " For the Superior."
+  },
+  {
+    "icon": 2,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Captain Rush :",
+    "line": " Right Team Ammo Check \n before we head into the next battle?"
+  },
+  {
+    "icon": 1,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Ranger Batu :",
+    "line": " Plenty of Ammo Sir.\n Ceartainly enough for the blasphemers sir."
+  },
+  {
+    "icon": 2,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Captain Rush :",
+    "line": " Easy Batu. They were once soldiers too,\n Don't let your rage blind you."
+  },
+  {
+    "icon": 1,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Ranger Batu :",
+    "line": " Yes Sir!"
+  },
+  {
+    "icon": 3,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Ranger X021 :",
+    "line": " Ammo Reserves are optimal sir."
+  },
+  {
+    "icon": 2,
+    "id": 2,
+    "bg": 2,
+    "titleLine": "Captain Rush :",
+    "line": " Good. Lets get moving\n and don't let the krakens get close."
+  }
+]

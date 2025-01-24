@@ -74,13 +74,13 @@ public class projectZeta extends Game {
     //Character 3 Atlas'
     private TextureAtlas characterRobot;
 
-
-    private TextureAtlas bullet;
+    private int level = 1;
 
     private TextureAtlas enemies;
     private TextureAtlas objects;
 
     public TextureAtlas playersChoice;
+    private int selection = 0;
 
     public static AssetManager manager;
 
@@ -146,6 +146,12 @@ public class projectZeta extends Game {
         manager.load("backgrounds/controls.png", Texture.class); // controls Background
         manager.load("backgrounds/pausebg.png", Texture.class); // pause
         manager.load("backgrounds/deadbg.png", Texture.class); // game over
+        manager.load("backgrounds/scripts/bg1.png", Texture.class);
+        manager.load("backgrounds/scripts/bg2.png", Texture.class);
+        manager.load("backgrounds/scripts/bg3.png", Texture.class);
+        manager.load("backgrounds/scripts/bg4.png", Texture.class);
+        manager.load("backgrounds/scripts/bg5.png", Texture.class);
+        manager.load("backgrounds/scripts/textBox.png", Texture.class);
 
 
         //Female
@@ -238,11 +244,17 @@ public class projectZeta extends Game {
         return playersChoice;
     }
 
-
-    public TextureAtlas getBullet() {
-        return bullet;
+    public void setPlayersChoice(TextureAtlas playersChoice) {
+        this.playersChoice = playersChoice;
     }
 
+    public int getSelection() {
+        return selection;
+    }
+
+    public void setSelection(int selection) {
+        this.selection = selection;
+    }
 
     public TextureAtlas getEnemies() {
         return enemies;
@@ -256,9 +268,12 @@ public class projectZeta extends Game {
         this.objects = objects;
     }
 
+    public int getLevel() {
+        return level;
+    }
 
-    public void setPlayersChoice(TextureAtlas playersChoice) {
-        this.playersChoice = playersChoice;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public void setInteract(int interact) {

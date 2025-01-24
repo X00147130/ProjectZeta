@@ -94,6 +94,7 @@ public class PlayScreen implements Screen {
         //game management inits
         this.zeta = g;
         this.level = level;
+        zeta.setLevel(this.level);
         this.manager = zeta.getManager();
 
         //view of the game
@@ -502,14 +503,14 @@ System.out.println("Mag Reloaded " + shotsFired);
 
         if (gameOver()) {
             zeta.music.stop();
-            zeta.setScreen(new GameOverScreen(zeta, area, level));
+            zeta.setScreen(new GameOverScreen(zeta, level));
             dispose();
         }
 
         if (complete) {
             if (player.getStateTimer() > 1.2) {
                 if (level < 10) {
-                    zeta.setScreen(new LevelComplete(zeta, area, level));
+                    zeta.setScreen(new LevelComplete(zeta, level));
                 } else {
                     zeta.setScreen(new LevelSelect(zeta));
                 }

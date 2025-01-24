@@ -1,13 +1,10 @@
 package com.mygdx.projectZeta.Scenes.Screens;
 
-import static com.badlogic.gdx.graphics.Color.CYAN;
-import static com.badlogic.gdx.graphics.Color.MAGENTA;
 import static com.badlogic.gdx.graphics.Color.WHITE;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -30,7 +27,6 @@ import com.mygdx.projectZeta.projectZeta;
 
 public class MenuScreen implements Screen  {
 
-    private AssetManager manager;
     private Viewport viewport;
     private Stage stage;
     private final projectZeta zeta;
@@ -61,14 +57,13 @@ public class MenuScreen implements Screen  {
 
     public MenuScreen(final projectZeta game) {
         this.zeta = game;
-        this.manager = projectZeta.getManager();
         batch = new SpriteBatch();
         viewport = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, zeta.batch);
 
 
         //background
-        background = manager.get("backgrounds/menubg.png", Texture.class);
+        background = projectZeta.manager.get("backgrounds/menubg.png", Texture.class);
 
 
         Table table = new Table();
@@ -83,28 +78,27 @@ public class MenuScreen implements Screen  {
         Label titleLabel2 = new Label("ZETA", font);
         titleLabel2.setFontScale(1.2f, 0.8f);
 
-
-        playImg = new Texture("UI/play.png");
+        playImg = new Texture("UI/Menu/play.png");
         playDraw = new TextureRegionDrawable(playImg);
         playButton = new ImageButton(playDraw);
         playButton.setSize(46,38);
 
-        lvlselImg = new Texture("UI/levelselect.png");
+        lvlselImg = new Texture("UI/Menu/levelselect.png");
         lvlselDraw = new TextureRegionDrawable(lvlselImg);
         lvlselButton = new ImageButton(lvlselDraw);
         lvlselButton.setSize(46,38);
 
-        controlsImg = new Texture("UI/controls.png");
+        controlsImg = new Texture("UI/Menu/controls.png");
         controlsDraw = new TextureRegionDrawable(controlsImg);
         controlsButton = new ImageButton(controlsDraw);
         controlsButton.setSize(46,38);
 
-        settingsImg = new Texture("UI/settings.png");
+        settingsImg = new Texture("UI/Menu/settings.png");
         settingsDraw = new TextureRegionDrawable(settingsImg);
         settingsButton = new ImageButton(settingsDraw);
         settingsButton.setSize(46,38);
 
-        quitImg = new Texture("UI/quit.png");
+        quitImg = new Texture("UI/Menu/quit.png");
         quitDraw = new TextureRegionDrawable(quitImg);
         quitButton = new ImageButton(quitDraw);
         quitButton.setSize(46,38);

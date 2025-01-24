@@ -16,7 +16,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Slider;
@@ -24,6 +26,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.projectZeta.projectZeta;
@@ -33,10 +37,20 @@ public class Settings implements Screen {
     private final projectZeta zeta;
     private Viewport viewport;
 
-    private Label backButton;
-    private Label musicLabel;
-    private Label soundLabel;
     private Label page;
+
+    Texture backImg;
+    Drawable backDraw;
+    Button backButton;
+
+    Texture musicImg;
+    Drawable musicDraw;
+    Button musicLabel;
+
+    Texture soundImg;
+    Drawable soundDraw;
+    Button soundLabel;
+
 
     private SpriteBatch batch;
 
@@ -63,20 +77,19 @@ public class Settings implements Screen {
         title.font = new BitmapFont(Gdx.files.internal("skins/DigitalDisco.fnt"));
         title.fontColor = WHITE;
 
-        //Text
-        Label.LabelStyle font = new Label.LabelStyle();
-        font.font = new BitmapFont(Gdx.files.internal("skins/DigitalDiscoThin.fnt"));
-        font.fontColor = WHITE;
-
         //Label Set up
         page = new Label("SETTINGS",title);
         page.setFontScale(0.9f, 0.7f);
 
-        musicLabel = new Label("Music Volume",font);
-        soundLabel = new Label("Sound Volume", font);
+        musicImg = new Texture("UI/Settings/musicVolume.png");
+        musicDraw = new TextureRegionDrawable(musicImg);
+        musicLabel = new ImageButton(musicDraw);
+        musicLabel.setSize(46,38);
 
-        musicLabel.setFontScale(0.5f, 0.5f);
-        soundLabel.setFontScale(0.5f, 0.5f);
+        soundImg = new Texture("UI/Settings/soundVolume.png");
+        soundDraw = new TextureRegionDrawable(soundImg);
+        soundLabel = new ImageButton(soundDraw);
+        soundLabel.setSize(46,38);
 
 
         //skin setup
@@ -141,9 +154,10 @@ public class Settings implements Screen {
         container1.setOrigin(container.getWidth() / 2 , container.getHeight() / 2);
         container1.setScale(0.2f);
 
-        //Back Button using label Setup
-        backButton = new Label("BACK",font);
-        backButton.setFontScale(0.5f, 0.5f);
+        backImg = new Texture("UI/back.png");
+        backDraw = new TextureRegionDrawable(backImg);
+        backButton = new ImageButton(backDraw);
+        backButton.setSize(46,38);
 
         //Creating a Table for positioning
         Table table = new Table();

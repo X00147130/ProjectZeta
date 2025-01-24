@@ -1,6 +1,5 @@
 package com.mygdx.projectZeta.Scenes.Screens;
 
-import static com.badlogic.gdx.graphics.Color.CYAN;
 import static com.badlogic.gdx.graphics.Color.WHITE;
 
 import com.badlogic.gdx.Application;
@@ -11,12 +10,15 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.projectZeta.Scenes.Hud;
@@ -32,8 +34,13 @@ public class PauseScreen implements Screen {
     private Label titleLabel;
     private Label.LabelStyle style;
     private Label.LabelStyle buttonStyle;
-    private Label resume;
-    private Label quit;
+    Texture resumeImg;
+    Drawable resumeDraw;
+    Button resumeButton;
+
+    Texture quitImg;
+    Drawable quitDraw;
+    Button quitButton;
 
 //Admin
     private projectZeta zeta;
@@ -66,10 +73,13 @@ public class PauseScreen implements Screen {
         titleLabel.setFontScale(0.8f, 0.6f);
 
 //Button Setups using Labels as Buttons
-        resume = new Label("resume", buttonStyle);
-        quit = new Label("quit", buttonStyle);
-        resume.setFontScale(0.5f, 0.5f);
-        quit.setFontScale(0.5f, 0.5f);
+        resumeImg = new Texture("UI/buttons/resume.png");
+        resumeDraw = new TextureRegionDrawable(resumeImg);
+        resumeButton = new ImageButton(resumeDraw);
+
+        quitImg = new Texture("UI/buttons/quit.png");
+        quitDraw = new TextureRegionDrawable(quitImg);
+        quitButton = new ImageButton(quitDraw);
 
 //Table Setup
         table = new Table ();
@@ -77,18 +87,18 @@ public class PauseScreen implements Screen {
         table.setFillParent(true);
 
 //Filling the Table
-        table.add(titleLabel).width(70).height(60).center();
+        table.add(titleLabel).center().padRight(5).padBottom(15);
         table.row();
-        table.add(resume).width(110).height(50).center().padLeft(70);
+        table.add(resumeButton).center().padBottom(10);
         table.row();
-        table.add(quit).width(110).height(50).center().padLeft(95);
+        table.add(quitButton).center().padRight(4);
 
 //Adding Table to the Stage and setting input reading on the stage to pick up any Clicks/Taps
         stage.addActor(table);
         Gdx.input.setInputProcessor(stage);
 
 //Setting up the Resume Button backend
-        resume.addListener(new ClickListener(){
+        resumeButton.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y){
 //Sets the sound of the volume and retrieves the volume from the settings slider bar that updates a variable in the main page ShootForSurvival
@@ -115,7 +125,7 @@ public class PauseScreen implements Screen {
         });
 
 //Setting up the Quit Button backend
-        quit.addListener(new ClickListener(){
+        quitButton.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y){
 //Sets the sound of the volume and retrieves the volume from the settings slider bar that updates a variable in the main page ShootForSurvival

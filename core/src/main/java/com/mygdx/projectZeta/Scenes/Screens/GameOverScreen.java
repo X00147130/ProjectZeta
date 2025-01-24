@@ -29,8 +29,9 @@ public class GameOverScreen implements Screen {
     private projectZeta zeta;
     private Table table;
     public boolean reset = false;
+    private String name;
+    private int selection = 0;
 
-    private int area = 1;
     private int map = 1;
 
     private Texture background;
@@ -39,17 +40,36 @@ public class GameOverScreen implements Screen {
     private Label playAgainButton;
     private Label mainMenuButton;
 
-    public GameOverScreen(projectZeta game, int location, int level){
+    public GameOverScreen(projectZeta game, int level){
         this.zeta = game;
         viewport = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, zeta.batch);
-        this.area = location;
         this.map = level;
 
         background = zeta.manager.get("backgrounds/deadbg.png", Texture.class);
 
         Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDisco.fnt")), RED);
         Label.LabelStyle buttonFont = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDiscoThin.fnt")), WHITE);
+
+        selection = zeta.getSelection();
+
+        switch(selection){
+            case 0:
+                name = "RANGER BATU";
+                break;
+            case 1:
+                name = "CAPTAIN RUSH";
+                break;
+
+            case 2:
+                name = "RANGER X021";
+                break;
+
+            default:
+                name = "RANGER";
+                break;
+        }
+
 
         table = new Table();
         table.center();
@@ -61,9 +81,9 @@ public class GameOverScreen implements Screen {
         mainMenuButton.setFontScale(0.4f, 0.4f);
 
 
-        Label gameOverLabel = new Label("YOU GOT", font);
+        Label gameOverLabel = new Label(name, font);
         gameOverLabel.setFontScale(0.8f, 0.5f);
-        Label gameOverLabel2 = new Label("PROBED!!!", font);
+        Label gameOverLabel2 = new Label("IS DOWN!!!", font);
         gameOverLabel2.setFontScale(0.8f, 0.7f);
         table.add(gameOverLabel).expandX().center();
         table.row();

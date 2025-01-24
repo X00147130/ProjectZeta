@@ -34,18 +34,49 @@ public class LevelSelect implements Screen {
 
 
     //buttons
-    Label level1;
-    Label level2;
-    Label level3;
-    Label level4;
-    Label level5;
-    Label level6;
-    Label level7;
-    Label level8;
-    Label level9;
-    Label level10;
+    Texture level1Img;
+    Drawable level1Draw;
+    Button level1Button;
 
-    Label backButton;
+    Texture level2Img;
+    Drawable level2Draw;
+    Button level2Button;
+
+    Texture level3Img;
+    Drawable level3Draw;
+    Button level3Button;
+
+    Texture level4Img;
+    Drawable level4Draw;
+    Button level4Button;
+
+    Texture level5Img;
+    Drawable level5Draw;
+    Button level5Button;
+
+    Texture level6Img;
+    Drawable level6Draw;
+    Button level6Button;
+
+    Texture level7Img;
+    Drawable level7Draw;
+    Button level7Button;
+
+    Texture level8Img;
+    Drawable level8Draw;
+    Button level8Button;
+
+    Texture level9Img;
+    Drawable level9Draw;
+    Button level9Button;
+
+    Texture level10Img;
+    Drawable level10Draw;
+    Button level10Button;
+
+    Texture backImg;
+    Drawable backDraw;
+    Button backButton;
 
     //Background
     private Texture background;
@@ -74,32 +105,49 @@ public class LevelSelect implements Screen {
         Label pageLabel = new Label("Level Select", font);
         pageLabel.setFontScale(0.7f, 0.6f);
 
-        //Button Init
-        level1 = new Label("Level 1", buttonFont);
-        level2 = new Label("Level 2", buttonFont);
-        level3 = new Label("Level 3", buttonFont);
-        level4 = new Label("Level 4", buttonFont);
-        level5 = new Label("Level 5", buttonFont);
-        level6 = new Label("Level 6", buttonFont);
-        level7 = new Label("Level 7", buttonFont);
-        level8 = new Label("Level 8", buttonFont);
-        level9 = new Label("Level 9", buttonFont);
-        level10 = new Label("Level 10", buttonFont);
+        level1Img = new Texture("UI/Levelselect/level1.png");
+        level1Draw = new TextureRegionDrawable(level1Img);
+        level1Button = new ImageButton(level1Draw);
 
-        level1.setFontScale(0.5f,0.5f);
-        level2.setFontScale(0.5f,0.5f);
-        level3.setFontScale(0.5f,0.5f);
-        level4.setFontScale(0.5f,0.5f);
-        level5.setFontScale(0.5f,0.5f);
-        level6.setFontScale(0.5f,0.5f);
-        level7.setFontScale(0.5f,0.5f);
-        level8.setFontScale(0.5f,0.5f);
-        level9.setFontScale(0.5f,0.5f);
-        level10.setFontScale(0.5f,0.5f);
+        level2Img = new Texture("UI/Levelselect/level2.png");
+        level2Draw = new TextureRegionDrawable(level2Img);
+        level2Button = new ImageButton(level2Draw);
 
+        level3Img = new Texture("UI/Levelselect/level3.png");
+        level3Draw = new TextureRegionDrawable(level3Img);
+        level3Button = new ImageButton(level3Draw);
 
-        backButton = new Label("Back", buttonFont);
-        backButton.setFontScale(0.5f,0.5f);
+        level4Img = new Texture("UI/Levelselect/level4.png");
+        level4Draw = new TextureRegionDrawable(level4Img);
+        level4Button = new ImageButton(level4Draw);
+
+        level5Img = new Texture("UI/Levelselect/level5.png");
+        level5Draw = new TextureRegionDrawable(level5Img);
+        level5Button = new ImageButton(level5Draw);
+
+        level6Img = new Texture("UI/Levelselect/level6.png");
+        level6Draw = new TextureRegionDrawable(level6Img);
+        level6Button = new ImageButton(level6Draw);
+
+        level7Img = new Texture("UI/Levelselect/level7.png");
+        level7Draw = new TextureRegionDrawable(level7Img);
+        level7Button = new ImageButton(level7Draw);
+
+        level8Img = new Texture("UI/Levelselect/level8.png");
+        level8Draw = new TextureRegionDrawable(level8Img);
+        level8Button = new ImageButton(level8Draw);
+
+        level9Img = new Texture("UI/Levelselect/level9.png");
+        level9Draw = new TextureRegionDrawable(level9Img);
+        level9Button = new ImageButton(level9Draw);
+
+        level10Img = new Texture("UI/Levelselect/level10.png");
+        level10Draw = new TextureRegionDrawable(level10Img);
+        level10Button = new ImageButton(level10Draw);
+
+        backImg = new Texture("UI/back.png");
+        backDraw = new TextureRegionDrawable(backImg);
+        backButton = new ImageButton(backDraw);
 
         //Table
         final Table grid = new Table();
@@ -115,20 +163,20 @@ public class LevelSelect implements Screen {
         //filling table for Tileset 1
         grid.add(pageLabel).center().padLeft(10).padBottom(10).padTop(20);
         grid.row();
-        grid2.add(level1).padTop(50);
-        grid2.add(level6).padRight(70).padLeft(20).padTop(50);
+        grid2.add(level1Button).padTop(10);
+        grid2.add(level6Button).padRight(70).padLeft(20).padTop(50).padTop(10);
         grid2.row();
-        grid2.add(level2);
-        grid2.add(level7).padRight(70).padLeft(20);
+        grid2.add(level2Button).padTop(3);
+        grid2.add(level7Button).padRight(70).padLeft(20).padTop(3);
         grid2.row();
-        grid2.add(level3);
-        grid2.add(level8).padRight(70).padLeft(20);
+        grid2.add(level3Button).padTop(3);
+        grid2.add(level8Button).padRight(70).padLeft(20).padTop(3);
         grid2.row();
-        grid2.add(level4);
-        grid2.add(level9).padRight(70).padLeft(20);
+        grid2.add(level4Button).padTop(3);
+        grid2.add(level9Button).padRight(70).padLeft(20).padTop(3);
         grid2.row();
-        grid2.add(level5);
-        grid2.add(level10).padRight(70).padLeft(20);
+        grid2.add(level5Button).padTop(3);
+        grid2.add(level10Button).padRight(70).padLeft(20).padTop(3);
         grid2.row();
         grid2.add(backButton).padTop(10).padLeft(140);
 
@@ -160,7 +208,7 @@ public class LevelSelect implements Screen {
         });
 
 
-        level1.addListener(new ClickListener(){
+        level1Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -183,7 +231,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level2.addListener(new ClickListener(){
+        level2Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -206,7 +254,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level3.addListener(new ClickListener(){
+        level3Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -229,7 +277,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level4.addListener(new ClickListener(){
+        level4Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -252,7 +300,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level5.addListener(new ClickListener(){
+        level5Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -274,7 +322,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level6.addListener(new ClickListener(){
+        level6Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -297,7 +345,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level7.addListener(new ClickListener(){
+        level7Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -320,7 +368,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level8.addListener(new ClickListener(){
+        level8Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -343,7 +391,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level9.addListener(new ClickListener(){
+        level9Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
@@ -365,7 +413,7 @@ public class LevelSelect implements Screen {
             }
         });
 
-        level10.addListener(new ClickListener(){
+        level10Button.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event,float x,float y){
                 if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
