@@ -33,8 +33,6 @@ public class MenuScreen implements Screen  {
     private Texture background;
     private SpriteBatch batch;
 
-
-    //Buttons
     Texture playImg;
     Drawable playDraw;
     Button playButton;
@@ -61,15 +59,11 @@ public class MenuScreen implements Screen  {
         viewport = new FitViewport(projectZeta.V_WIDTH, projectZeta.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, zeta.batch);
 
-
-        //background
         background = projectZeta.manager.get("backgrounds/menubg.png", Texture.class);
-
 
         Table table = new Table();
         table.center();
         table.setFillParent(true);
-
 
         Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDisco.fnt")), WHITE);
         Label.LabelStyle buttonFont = new Label.LabelStyle(new BitmapFont(Gdx.files.internal("skins/DigitalDiscoThin.fnt")), WHITE);
@@ -118,10 +112,8 @@ public class MenuScreen implements Screen  {
         table.add(quitButton).expandX().padTop(5);
         table.row();
 
-
         stage.addActor(table);
         Gdx.input.setInputProcessor(stage);
-
 
         playButton.addListener(new ClickListener() {
             @Override
@@ -140,10 +132,8 @@ public class MenuScreen implements Screen  {
                 }
                 if(zeta.music.isPlaying())
                     zeta.music.stop();
-
                 zeta.setScreen(new CharacterSelect(zeta, 1));
                 dispose();
-
             }
         });
 
@@ -162,7 +152,6 @@ public class MenuScreen implements Screen  {
                 if(Gdx.app.getType() == Application.ApplicationType.Android) {
                     zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
                 }
-
                 zeta.setScreen(new LevelSelect(zeta));
             }
         });
@@ -182,7 +171,6 @@ public class MenuScreen implements Screen  {
                 if(Gdx.app.getType() == Application.ApplicationType.Android) {
                     zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
                 }
-
                 zeta.setScreen(new Controls(zeta));
             }
         });
@@ -202,7 +190,6 @@ public class MenuScreen implements Screen  {
                 if(Gdx.app.getType() == Application.ApplicationType.Android) {
                     zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
                 }
-
                 zeta.setScreen(new Settings(zeta));
             }
         });
@@ -219,70 +206,56 @@ public class MenuScreen implements Screen  {
                         zeta.sound.setVolume(id, 0);
                     }
                 }
-
                 if(Gdx.app.getType() == Application.ApplicationType.Android) {
                     zeta.manager.get("audio/sounds/421837__prex2202__blipbutton.mp3", Sound.class).play(zeta.getSoundVolume());
                 }
-
-                /*System.gc();*/
                 dispose();
                 System.exit(0);
             }
         });
 
-
         zeta.loadMusic("audio/music/jantrax - ai.mp3");
         if(zeta.getVolume() != 0) {
             zeta.music.play();
             zeta.music.setVolume(zeta.getVolume());
-            }
+        }
     }
+
     @Override
     public void show() {
-
     }
+
     @Override
     public void render(float delta){
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        if(Gdx.app.getType() == Application.ApplicationType.Desktop) {
-            batch.begin();
-            batch.draw(background,0,-20,1950,1250);
-            batch.end();
-        }
-        else if(Gdx.app.getType() == Application.ApplicationType.Android){
-            batch.begin();
-            batch.draw(background, 0, 0, 2250,1075);
-            batch.end();
-        }
+        batch.setProjectionMatrix(stage.getCamera().combined);
+        batch.begin();
+        batch.draw(background,0,0,stage.getViewport().getWorldWidth(),stage.getViewport().getWorldHeight());
+        batch.end();
         stage.draw();
     }
-
 
     @Override
     public void resize(int width, int height) {
         stage.getViewport().update(width,height,true);
-
     }
 
     @Override
     public void pause() {
-
     }
 
     @Override
     public void resume() {
-
     }
 
     @Override
     public void hide() {
-
     }
 
     @Override
     public void dispose() {
-    stage.dispose();
-    System.gc();
+        stage.dispose();
+        System.gc();
     }
 }
