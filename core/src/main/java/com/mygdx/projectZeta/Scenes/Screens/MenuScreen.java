@@ -22,6 +22,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.mygdx.projectZeta.Tools.TransitionScreen;
 import com.mygdx.projectZeta.projectZeta;
 
 
@@ -32,6 +33,8 @@ public class MenuScreen implements Screen  {
     private final projectZeta zeta;
     private Texture background;
     private SpriteBatch batch;
+    //Scene Variable
+    private int sceneTracking;
 
     Texture playImg;
     Drawable playDraw;
@@ -40,7 +43,8 @@ public class MenuScreen implements Screen  {
     Texture lvlselImg;
     Drawable lvlselDraw;
     Button lvlselButton;
-
+    //level variable
+    private int level;
     Texture controlsImg;
     Drawable controlsDraw;
     Button controlsButton;
@@ -71,7 +75,9 @@ public class MenuScreen implements Screen  {
         titleLabel.setFontScale(1.2f, 0.8f);
         Label titleLabel2 = new Label("ZETA", font);
         titleLabel2.setFontScale(1.2f, 0.8f);
+        sceneTracking = zeta.getSceneTracking() + 1;
 
+        //controller
         playImg = new Texture("UI/Menu/play.png");
         playDraw = new TextureRegionDrawable(playImg);
         playButton = new ImageButton(playDraw);
@@ -132,7 +138,7 @@ public class MenuScreen implements Screen  {
                 }
                 if(zeta.music.isPlaying())
                     zeta.music.stop();
-                zeta.setScreen(new CharacterSelect(zeta, 1));
+                zeta.setScreen(new TransitionScreen(zeta.getScreen(),(new CutsceneScreen(zeta,sceneTracking,level,true)),zeta,level));
                 dispose();
             }
         });
