@@ -3,12 +3,13 @@ package com.mygdx.projectZeta.Tools;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.mygdx.projectZeta.Scenes.Screens.PlayScreen;
 import com.mygdx.projectZeta.projectZeta;
 
 public class TransitionScreen implements Screen {
     private Screen currentScreen;
     private Screen newScreen;
-
+    private int map;
     private projectZeta zeta;
 
     private float alpha = 0;
@@ -16,10 +17,11 @@ public class TransitionScreen implements Screen {
     private boolean fadeDirection = true;
     private ShapeRenderer shapeRenderer;
 
-    public TransitionScreen(Screen currentScreen, Screen newScreen, projectZeta zeta) {
+    public TransitionScreen(Screen currentScreen, Screen newScreen, projectZeta zeta,int level) {
         this.currentScreen = currentScreen;
         this.newScreen = newScreen;
         this.zeta = zeta;
+        this.map = level;
 
         zeta.setScreen(newScreen);
         zeta.setScreen(currentScreen);
@@ -59,7 +61,10 @@ public class TransitionScreen implements Screen {
             zeta.setScreen(newScreen);
             dispose();
         }
-        alpha += fadeDirection == true ? 0.01 : -0.01;
+        if (currentScreen.getClass() == PlayScreen.class)
+            alpha += fadeDirection == true ? 0.03 : -0.01;
+        else
+            alpha += fadeDirection == true ? 0.01 : -0.01;
     }
 
     @Override

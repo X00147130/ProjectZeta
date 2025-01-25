@@ -122,6 +122,7 @@ public class Controls implements Screen {
         controlsImg = new Texture("UI/Controls/controlstitle.png");
         controlsDraw = new TextureRegionDrawable(controlsImg);
         controlsButton = new ImageButton(controlsDraw);
+        controlsButton.setScale(2.8f);
 
         backImg = new Texture("UI/back.png");
         backDraw = new TextureRegionDrawable(backImg);

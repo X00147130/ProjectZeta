@@ -27,6 +27,7 @@ import com.mygdx.projectZeta.Sprites.Player;
 import com.mygdx.projectZeta.Sprites.Items.Bullets;
 import com.mygdx.projectZeta.Tools.B2WorldCreator;
 import com.mygdx.projectZeta.Tools.Controller;
+import com.mygdx.projectZeta.Tools.TransitionScreen;
 import com.mygdx.projectZeta.Tools.WorldContactListener;
 import com.mygdx.projectZeta.projectZeta;
 
@@ -70,8 +71,6 @@ public class PlayScreen implements Screen {
     private float emptyMagTimer = 0f;
     private static final float RELOAD_TIMER = 3.5f;
 
-
-
     //Sprite Variable
     private Array<Item> items;
     public LinkedBlockingQueue<ItemDef> itemToSpawn;
@@ -85,6 +84,9 @@ public class PlayScreen implements Screen {
 
     //level variable
     private int level;
+
+    //Scene Variable
+    private int sceneTracking;
 
     //controller creation
     public Controller controller;
@@ -101,6 +103,8 @@ public class PlayScreen implements Screen {
         gamecam = new OrthographicCamera();
         gamePort = new FitViewport(projectZeta.MAP_WIDTH / projectZeta.PPM, projectZeta.MAP_HEIGHT / projectZeta.PPM, gamecam);
         hud = new Hud(zeta.batch, zeta, zeta.getScreen(), this);
+
+        sceneTracking = zeta.getSceneTracking() + 1;
 
         //controller
         if (Gdx.app.getType() == Application.ApplicationType.Android) {
@@ -328,35 +332,6 @@ public class PlayScreen implements Screen {
             }
         }
 
-       /* for (Bullets bullet : mag) {
-            bullet.bulletBody.setActive(true);
-            bullet.update(dt);
-            bulletDamage = bullet.getDamage();
-        }
-
-//Reloading Mag For Gun
-        if(shotsFired == MAG_SIZE){
-            if(emptyMagTimer < RELOAD_TIMER){
-                emptyMagTimer += dt;
-            }
-            else if(emptyMagTimer >= RELOAD_TIMER){
-                shotsFired = 0;
-                emptyMagTimer = 0f;
-System.out.println("Mag Reloaded " + shotsFired);
-            }
-        }
-
-        Iterator<Bullets> iterator = mag.iterator();
-        while (iterator.hasNext()){
-            Bullets ammo = iterator.next();
-            if(ammo.isCollided()){
-                ammo.destroy();
-                iterator.remove();
-                System.out.println("Bullet gone");
-            }
-        }*/
-
-
         for (Item item : creator.getCoins()) {
             item.update(dt);
         }
@@ -511,12 +486,12 @@ System.out.println("Mag Reloaded " + shotsFired);
         if (complete) {
             if (player.getStateTimer() > 1.2) {
                 if (level < 10) {
-                    zeta.setScreen(new LevelComplete(zeta, level));
+                    zeta.setScreen(new TransitionScreen(zeta.getScreen(),(new CutsceneScreen(zeta,sceneTracking,level,true)),zeta,level));
                 } else {
-                    zeta.setScreen(new LevelSelect(zeta));
+                    zeta.setScreen(new TransitionScreen(zeta.getScreen(),(new LevelSelect(zeta)),zeta,level));
                 }
-                dispose();
             }
+            /*dispose();*/
         }
     }
 

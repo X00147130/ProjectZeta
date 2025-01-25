@@ -66,9 +66,11 @@ public class CharacterSelect implements Screen {
     private Label enter;
     private Label choose;
 
+    private int id = 0;
+
 
     //Class Constructors
-    public CharacterSelect(projectZeta game, int level) {
+    public CharacterSelect(projectZeta game, int level, int id) {
 //Variable initalisation
         this.zeta = game;
         viewport = new FitViewport(zeta.V_WIDTH, zeta.V_HEIGHT, new OrthographicCamera());
@@ -76,6 +78,7 @@ public class CharacterSelect implements Screen {
         map = level;
         background = zeta.manager.get("backgrounds/characterselect.png", Texture.class);
 
+        this.id = id;
 
 //initialising and instantiating of animatimation arrays
         characterSelector = new ArrayList<Texture>(3);
@@ -229,7 +232,7 @@ public class CharacterSelect implements Screen {
                     }
                     zeta.setPlayersChoice(selected);
 
-                    zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,1), zeta));
+                    zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,1, map, false), zeta,map));
                 }
             });
         }
@@ -372,7 +375,7 @@ public class CharacterSelect implements Screen {
 
                 zeta.setSelection(selection);
                 zeta.setPlayersChoice(selected);
-                zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,1),zeta));
+                zeta.setScreen(new TransitionScreen(zeta.getScreen(), new CutsceneScreen(zeta,id, map,false),zeta, map));
             }
         }
     }

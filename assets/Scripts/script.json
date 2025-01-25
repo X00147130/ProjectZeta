@@ -62,43 +62,100 @@
   {
     "icon": 2,
     "id": 2,
-    "bg": 2,
+    "bg": 1,
     "titleLine": "Captain Rush :",
     "line": " Right Team Ammo Check \n before we head into the next battle?"
   },
   {
     "icon": 1,
     "id": 2,
-    "bg": 2,
+    "bg": 1,
     "titleLine": "Ranger Batu :",
-    "line": " Plenty of Ammo Sir.\n Ceartainly enough for the blasphemers sir."
+    "line": " Plenty of Ammo Sir. Ceartainly\n enough for the blasphemers sir."
   },
   {
     "icon": 2,
     "id": 2,
-    "bg": 2,
+    "bg": 1,
     "titleLine": "Captain Rush :",
-    "line": " Easy Batu. They were once soldiers too,\n Don't let your rage blind you."
+    "line": " Easy Batu. They were once soldiers\n too, Don't let your rage blind you."
   },
   {
     "icon": 1,
     "id": 2,
-    "bg": 2,
+    "bg": 1,
     "titleLine": "Ranger Batu :",
     "line": " Yes Sir!"
   },
   {
     "icon": 3,
     "id": 2,
-    "bg": 2,
+    "bg": 1,
     "titleLine": "Ranger X021 :",
     "line": " Ammo Reserves are optimal sir."
   },
   {
     "icon": 2,
     "id": 2,
+    "bg": 1,
+    "titleLine": "Captain Rush :",
+    "line": " Good. Lets get moving and\n don't let the krakens get close."
+  },
+
+  {
+    "icon": 2,
+    "id": 3,
     "bg": 2,
     "titleLine": "Captain Rush :",
-    "line": " Good. Lets get moving\n and don't let the krakens get close."
+    "line": " Come in Command. We have\n advanced to the next sector."
+  },
+  {
+    "icon": 3,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "Marshal Zoid :",
+    "line": " Outstanding work Captain."
+  },
+  {
+    "icon": 3,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "Marshal Zoid :",
+    "line": " We have spotted what\n appears to be a base."
+  },
+  {
+    "icon": 3,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "Marshal Zoid :",
+    "line": " We need your team to\n infiltrate and plant our flag."
+  },
+  {
+    "icon": 2,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "CAPTAIN RUSH :",
+    "line": " It will be done in\n the name of the SUPERIOR!!"
+  },
+  {
+    "icon": 2,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "CAPTAIN RUSH  :",
+    "line": " Alright team.\n Command has found a base"
+  },
+  {
+    "icon": 1,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "RANGER BATU :",
+    "line": " How far away Sir?"
+  },
+  {
+    "icon": 2,
+    "id": 3,
+    "bg": 2,
+    "titleLine": "CAPTAIN RUSH  :",
+    "line": " Not Far. Orders are\n to take control of the base"
   }
 ]
