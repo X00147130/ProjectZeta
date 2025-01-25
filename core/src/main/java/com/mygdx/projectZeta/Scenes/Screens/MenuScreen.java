@@ -138,8 +138,8 @@ public class MenuScreen implements Screen  {
                 }
                 if(zeta.music.isPlaying())
                     zeta.music.stop();
-                zeta.setScreen(new TransitionScreen(zeta.getScreen(),(new CutsceneScreen(zeta,sceneTracking,level,true)),zeta,level));
-                dispose();
+                    zeta.setScreen(new CharacterSelect(zeta, 1,1));
+                    dispose();
             }
         });
 
