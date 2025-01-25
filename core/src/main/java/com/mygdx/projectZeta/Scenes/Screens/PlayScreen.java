@@ -367,9 +367,19 @@ public class PlayScreen implements Screen {
         hud.update(dt);
         zeta.setHud(hud);
 
-        for (Bullets bullet : mag) {
-            bullet.bulletBody.setActive(true);
+        Iterator<Bullets> bulletIter = mag.iterator();
+        while (bulletIter.hasNext()) {
+            Bullets bullet = bulletIter.next();
+
+            if (bullet.isCollided()) {
+                bullet.destroy();
+                bulletIter.remove();
+                System.out.println("Bullet gone");
+                continue;
+            }
+
             bullet.update(dt);
+            bullet.bulletBody.setActive(true);
             bulletDamage = bullet.getDamage();
         }
 
@@ -385,15 +395,6 @@ public class PlayScreen implements Screen {
             }
         }
 
-        Iterator<Bullets> iterator = mag.iterator();
-        while (iterator.hasNext()){
-            Bullets ammo = iterator.next();
-            if(ammo.isCollided()){
-                ammo.destroy();
-                iterator.remove();
-                System.out.println("Bullet gone");
-            }
-        }
 
         gamecam.update();
 
